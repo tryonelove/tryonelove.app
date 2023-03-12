@@ -28,7 +28,7 @@ export function BubbleContainer({ className }: BubbleContainerProps) {
                 <Bubble
                     className={clsx(
                         className,
-                        'h-[3000px] w-[3000px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black opacity-20 blur-sm'
+                        'aspect-square h-[400%] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black blur-sm'
                     )}
                     center={bubbleCenterCoordinates}
                 />

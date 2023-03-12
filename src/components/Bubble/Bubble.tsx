@@ -23,12 +23,13 @@ export function Bubble({ className, center }: BubbleProps) {
         const bubbleCenterX = center.x - width / 2;
         const bubbleCenterY = center.y - height / 2;
 
-        bubbleRef.current.style.top = createPxUnits(bubbleCenterY);
-        bubbleRef.current.style.left = createPxUnits(bubbleCenterX);
+        bubbleRef.current.style.transform = `translate(${createPxUnits(bubbleCenterX)}, ${createPxUnits(
+            bubbleCenterY
+        )}`;
     }, [center, center.x, center.y, theme]);
 
     return (
-        <div className='absolute h-full w-full overflow-hidden'>
+        <div className='absolute h-screen w-full overflow-hidden'>
             <div
                 className={clsx(className, 'absolute rounded-full')}
                 ref={bubbleRef}
