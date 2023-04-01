@@ -14,7 +14,7 @@ export function Profile({ name, position, company }: ProfileProps) {
   const companyPosition = defaultCompanyPositionFormatter(position, company);
 
   return (
-    <div className='flex items-center justify-center gap-3 pt-9'>
+    <div className='flex items-center justify-center gap-3'>
       <Image
         className='h-28 w-28 rounded-full object-contain'
         src={avatar}
