@@ -1,11 +1,34 @@
 import { AppHead } from '@/components/AppHead';
-import { AppMain } from '@/components/AppMain';
+import { Layout } from '@/components/Layout';
+import { PostsPreview } from '@/components/PostsPreview';
 
-export default function Home() {
+export function getStaticProps() {
+  return {
+    props: {
+      name: process.env.NAME,
+      company: process.env.COMPANY,
+      position: process.env.POSITION,
+    },
+  };
+}
+
+interface HomeProps {
+  name: string;
+  company: string;
+  position: string;
+}
+
+export default function Home({ name, company, position }: HomeProps) {
   return (
     <>
       <AppHead />
-      <AppMain />
+      <Layout
+        name={name}
+        company={company}
+        position={position}
+      >
+        <PostsPreview />
+      </Layout>
     </>
   );
 }

@@ -1,21 +1,25 @@
-import { Inter } from 'next/font/google';
 import { clsx } from 'clsx';
+import { ReactNode } from 'react';
 import { Profile } from '../Profile';
 
-const inter = Inter({ subsets: ['latin'] });
-
-interface AppMainProps {
+interface LayoutProps {
+  className?: string;
   name: string;
   company: string;
   position: string;
+  children: ReactNode;
 }
 
-export function AppMain({ name, company, position }: AppMainProps) {
+export function Layout({
+  className,
+  name,
+  company,
+  position,
+  children,
+}: LayoutProps) {
   return (
-    <main
-      className={clsx(inter.className, 'flex h-screen flex-col items-center')}
-    >
-      <div className='container mx-auto max-w-2xl'>
+    <main className={clsx(className, 'flex h-screen flex-col items-center')}>
+      <div className='container mx-auto max-w-xl'>
         <div className='flex gap-9'>
           <div className='flex flex-1 flex-col gap-7'>
             <Profile
@@ -24,6 +28,7 @@ export function AppMain({ name, company, position }: AppMainProps) {
               position={position}
             />
             <hr />
+            <div className='flex flex-col items-center'>{children}</div>
           </div>
         </div>
       </div>
