@@ -1,3 +1,7 @@
 export { PostPreview } from './PostPreview';
-export { type PostPreviewItem } from './types';
-export { createPostPreviewItemFrom } from './utils';
+export type { PostPreviewItem, PostPreviewItemSerializable } from './types';
+export {
+  createPostPreviewItem,
+  createPostPreviewItemFromSerializable,
+  createPostPreviewItemSerializable,
+} from './utils';

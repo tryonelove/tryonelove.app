@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import avatar from '@/public/avatar.jpg';
+import avatar from '@/public/avatar.png';
 
 interface ProfileProps {
   name: string;
@@ -18,7 +18,8 @@ export function Profile({ name, position, company }: ProfileProps) {
       <Image
         className='h-28 w-28 rounded-full object-contain'
         src={avatar}
-        alt='avatar'
+        alt={`${name} avatar`}
+        priority
       />
       <div className='flex flex-col gap-1'>
         <p className='text-2xl font-medium'>{name}</p>

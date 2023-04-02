@@ -6,3 +6,7 @@ export type PostPreviewItem = {
   link: string;
   date: DateTime;
 };
+
+export type PostPreviewItemSerializable = Omit<PostPreviewItem, 'date'> & {
+  isoDate: string;
+};

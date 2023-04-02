@@ -14,7 +14,7 @@ export function PostPreview({
   createdAt,
 }: PostPreviewProps) {
   return (
-    <div className='flex flex-col gap-4 rounded-lg border p-5'>
+    <div className='flex w-full max-w-lg flex-col gap-4 rounded-lg border p-5'>
       <a
         className='truncate text-center text-xl font-bold'
         href={link}
