@@ -1,4 +1,4 @@
-import { createPathFrom } from '@/pages/posts/utils';
+import { createPathFrom } from '@/utils/posts/path';
 import { PostPreview, PostPreviewItem } from '../PostPreview';
 
 interface PostsPreviewProps {
