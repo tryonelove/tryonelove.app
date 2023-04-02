@@ -26,7 +26,7 @@ const checkIfPostData = (data: Record<string, any>): data is MdxPostMeta =>
 export function getAllPostsData() {
   const postsDirectories = getPostsDirectories();
 
-  const posts: PostData[] = postsDirectories.map((d) => {
+  const posts = postsDirectories.map<PostData>((d) => {
     const postPath = getFullPostPath(d.name);
 
     const { data } = read(postPath);
