@@ -2,7 +2,7 @@ import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import { Section, SectionTitle } from '../components/ui/section';
 import { SecondaryText } from '../components/ui/text';
 import Image from 'next/image';
-import avatar from 'public/avatar.png';
+import avatar from 'public/avatar.jpg';
 import { DateTime } from 'luxon';
 import { ContactIconButton } from '../components/ui/contact';
 import {
@@ -11,14 +11,13 @@ import {
   TimelineItemDescription,
   TimelineItemHeader,
   TimelineItemPeriod,
-  TimelineItemSubtitle,
   TimelineItemTitle,
 } from '@/components/ui/timeline';
-import { WorkExperienceTimeline } from '@/components/ui/work-experience-timeline';
-import { workExperienceItems } from './work-experience-items';
+import { workExperienceItems } from '../work-experience-items';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
+import { WorkExperienceTimeline } from '@/components/ui/work-experience-timeline';
 
 export default function Home() {
   return (
