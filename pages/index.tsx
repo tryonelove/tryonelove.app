@@ -14,22 +14,41 @@ import {
   TimelineItemSubtitle,
   TimelineItemTitle,
 } from '@/components/ui/timeline';
+import { WorkExperienceTimeline } from '@/components/ui/work-experience-timeline';
+import { workExperienceItems } from './work-experience-items';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 
 export default function Home() {
   return (
     <main className='container mx-auto flex flex-col gap-8 pt-24 md:max-w-screen-md'>
       <div className='flex justify-between'>
         <Section>
-          <SectionTitle>Ilya Zdanovich</SectionTitle>
+          <div className='flex items-center gap-2'>
+            <SectionTitle>Ilya Zdanovich</SectionTitle>
+            <ThemeToggle className='opacity-15 transition-opacity hover:opacity-50' />
+          </div>
           <div className='flex flex-col gap-1'>
             <SecondaryText>
               Frontend Software engineer focused on building intuitive user
               interfaces
             </SecondaryText>
-            <SecondaryText className='flex items-center gap-1 text-sm'>
-              <MapPin className='h-4 w-4 stroke-1' />
-              Warsaw, Poland
-            </SecondaryText>
+            <Button
+              className='w-fit p-0'
+              variant='link'
+              asChild
+            >
+              <Link
+                href='https://www.google.com/maps/place/Warsaw,+Poland'
+                target='blank'
+              >
+                <SecondaryText className='flex items-center gap-1 text-sm'>
+                  <MapPin className='h-4 w-4 stroke-1' />
+                  Warsaw, Poland
+                </SecondaryText>
+              </Link>
+            </Button>
           </div>
           <div className='flex gap-1'>
             <ContactIconButton
@@ -49,7 +68,7 @@ export default function Home() {
           </div>
         </Section>
         <Image
-          className='h-32 w-32 rounded-lg'
+          className='h-32 w-32 rounded-full object-cover'
           src={avatar}
           alt='Ilya Zdanovich'
         />
@@ -65,51 +84,7 @@ export default function Home() {
       </Section>
       <Section>
         <SectionTitle>Work experience</SectionTitle>
-        <Timeline>
-          <TimelineItem>
-            <TimelineItemHeader>
-              <div>
-                <TimelineItemTitle link='https://ventionteams.com'>
-                  Vention
-                </TimelineItemTitle>
-                <TimelineItemSubtitle>
-                  Frontend Software Engineer
-                </TimelineItemSubtitle>
-              </div>
-              <TimelineItemPeriod
-                startDate={DateTime.fromObject({ year: 2022 })}
-              />
-            </TimelineItemHeader>
-            <TimelineItemDescription>
-              I was responsible for developing and maintaining the core
-              application of the company. I was also responsible for developing
-              and maintaining the companys design system.
-              <br />
-              Technologies: React, Redux, TypeScript, React-Query
-            </TimelineItemDescription>
-          </TimelineItem>
-          <TimelineItem>
-            <TimelineItemHeader>
-              <div>
-                <TimelineItemTitle>iTechArt</TimelineItemTitle>
-                <TimelineItemSubtitle>
-                  Full-Stack Software Engineer
-                </TimelineItemSubtitle>
-              </div>
-              <TimelineItemPeriod
-                startDate={DateTime.fromObject({ year: 2021 })}
-                endDate={DateTime.fromObject({ year: 2022 })}
-              />
-            </TimelineItemHeader>
-            <TimelineItemDescription>
-              I was responsible for developing and maintaining the core
-              application of the company. I was also responsible for developing
-              and maintaining the companys design system.
-              <br />
-              Technologies: .NET, Entity Framework, React, Redux, TypeScript
-            </TimelineItemDescription>
-          </TimelineItem>
-        </Timeline>
+        <WorkExperienceTimeline items={workExperienceItems} />
       </Section>
       <Section>
         <SectionTitle>Education</SectionTitle>
