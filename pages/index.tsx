@@ -4,7 +4,6 @@ import { SecondaryText } from '../components/ui/text';
 import Image from 'next/image';
 import avatar from 'public/avatar.png';
 import { DateTime } from 'luxon';
-import { Button } from '@/components/ui/button';
 import { ContactIconButton } from './components/contact';
 import {
   Timeline,
