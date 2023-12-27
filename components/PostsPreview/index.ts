@@ -1,1 +1,0 @@
-export { PostsPreview } from './PostsPreview';
