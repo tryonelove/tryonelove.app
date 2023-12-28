@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
+import { Github, Linkedin, Mail, MailIcon, MapPin } from 'lucide-react';
 import { Section, SectionTitle } from '../components/ui/section';
 import { SecondaryText } from '../components/ui/text';
 import Image from 'next/image';
@@ -51,7 +51,7 @@ export default function Home() {
           </div>
           <div className='flex gap-1'>
             <ContactIconButton
-              icon={Mail}
+              icon={MailIcon}
               href='mailto:ilya.zdanovich@proton.me'
             />
             <ContactIconButton

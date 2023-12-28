@@ -7,7 +7,7 @@ export const Text = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     {...props}
-    className={clsx('text-base text-primary', className)}
+    className={clsx(className, 'text-base')}
     ref={ref}
   />
 ));
