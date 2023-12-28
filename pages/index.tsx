@@ -21,7 +21,7 @@ import { WorkExperienceTimeline } from '@/components/ui/work-experience-timeline
 
 export default function Home() {
   return (
-    <main className='container mx-auto flex flex-col gap-8 pt-24 md:max-w-screen-md'>
+    <main className='container mx-auto flex flex-col gap-8 py-24 md:max-w-screen-md'>
       <div className='flex justify-between'>
         <Section>
           <div className='flex items-center gap-2'>
