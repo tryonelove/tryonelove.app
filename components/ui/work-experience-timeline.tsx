@@ -47,7 +47,10 @@ export function WorkExperienceTimeline({ items }: WorkExperienceTimelineProps) {
               </TimelineItemTitle>
               <TimelineItemSubtitle>{item.position}</TimelineItemSubtitle>
             </div>
-            <TimelineItemPeriod startDate={item.startDate} />
+            <TimelineItemPeriod
+              startDate={item.startDate}
+              endDate={item.endDate}
+            />
           </TimelineItemHeader>
           <TimelineItemDescription>{item.description}</TimelineItemDescription>
         </TimelineItem>
