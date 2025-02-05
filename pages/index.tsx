@@ -75,7 +75,7 @@ export default function Home() {
       <Section>
         <SectionTitle>About</SectionTitle>
         <SecondaryText>
-          As a Frontend Software Engineer, I bring over {DateTime.now().diff(DateTime.fromObject({ year: 2021 }), 'years').years} years of experience to
+          As a Frontend Software Engineer, I bring over {Math.floor(DateTime.now().diff(DateTime.fromObject({ year: 2021 }), 'years').years)} years of experience to
           the table, specializing in React, TypeScript, Next.js, HTML, and CSS.
           My commitment lies in crafting intuitive user interfaces that not only
           meet but exceed user expectations.
@@ -101,6 +101,22 @@ export default function Home() {
             <TimelineItemDescription>
               Bachelor&apos;s Degree in Computer Engineering
             </TimelineItemDescription>
+          </TimelineItem>
+        </Timeline>
+      </Section>
+      <Section>
+        <SectionTitle>Certifications</SectionTitle>
+        <Timeline>
+          <TimelineItem>
+            <TimelineItemHeader>
+              <TimelineItemTitle>
+                AWS Certified Cloud Practitioner
+              </TimelineItemTitle>
+              <TimelineItemPeriod
+                startDate={DateTime.fromObject({ year: 2025 })}
+                endDate={DateTime.fromObject({ year: 2025 })}
+              />
+            </TimelineItemHeader>
           </TimelineItem>
         </Timeline>
       </Section>

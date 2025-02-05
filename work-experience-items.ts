@@ -5,7 +5,7 @@ export const workExperienceItems: WorkExperienceItem[] = [
   {
     company: 'Grid Dynamics',
     position: 'UI Engineer',
-    link: 'https://ventionteams.com',
+    link: 'https://www.griddynamics.com',
     startDate: DateTime.fromObject({ year: 2024 }),
     endDate: DateTime.fromObject({ year: 2025 }),
     description: `
