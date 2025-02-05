@@ -3,7 +3,6 @@ import { Section, SectionTitle } from '../components/ui/section';
 import { SecondaryText } from '../components/ui/text';
 import Image from 'next/image';
 import avatar from 'public/avatar.jpg';
-import { DateTime } from 'luxon';
 import { ContactIconButton } from '../components/ui/contact';
 import {
   Timeline,
@@ -18,6 +17,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { WorkExperienceTimeline } from '@/components/ui/work-experience-timeline';
+import { DateTime } from 'luxon';
 
 export default function Home() {
   return (
@@ -75,7 +75,7 @@ export default function Home() {
       <Section>
         <SectionTitle>About</SectionTitle>
         <SecondaryText>
-          As a Frontend Software Engineer, I bring over 3 years of experience to
+          As a Frontend Software Engineer, I bring over {DateTime.fromObject({ year: 2021 }).diffNow().years} years of experience to
           the table, specializing in React, TypeScript, Next.js, HTML, and CSS.
           My commitment lies in crafting intuitive user interfaces that not only
           meet but exceed user expectations.

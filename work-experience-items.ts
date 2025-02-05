@@ -3,10 +3,22 @@ import { DateTime } from 'luxon';
 
 export const workExperienceItems: WorkExperienceItem[] = [
   {
+    company: 'Grid Dynamics',
+    position: 'UI Engineer',
+    link: 'https://ventionteams.com',
+    startDate: DateTime.fromObject({ year: 2024 }),
+    endDate: DateTime.fromObject({ year: 2025 }),
+    description: `
+      Designed and built an AI-driven B2B analytics platform from scratch, helping marketing researchers make
+data-driven decisions to optimize marketing strategies.
+    `,
+  },
+  {
     company: 'Vention',
     position: 'Frontend Software Engineer',
     link: 'https://ventionteams.com',
     startDate: DateTime.fromObject({ year: 2022 }),
+    endDate: DateTime.fromObject({ year: 2024 }),
     description: `
       Developed a a platform to help managers and employees communicate and collaborate more effectively.
       Led the implementation of reporting tool for employees to conveniently report their work and reduce taxes.
