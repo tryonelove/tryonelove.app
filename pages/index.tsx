@@ -75,7 +75,7 @@ export default function Home() {
       <Section>
         <SectionTitle>About</SectionTitle>
         <SecondaryText>
-          As a Frontend Software Engineer, I bring over {DateTime.now().diff(DateTime.fromObject({ year: 2021 })).years} years of experience to
+          As a Frontend Software Engineer, I bring over {DateTime.now().diff(DateTime.fromObject({ year: 2021 }), 'years').year} years of experience to
           the table, specializing in React, TypeScript, Next.js, HTML, and CSS.
           My commitment lies in crafting intuitive user interfaces that not only
           meet but exceed user expectations.
