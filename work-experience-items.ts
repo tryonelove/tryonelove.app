@@ -3,6 +3,14 @@ import { DateTime } from 'luxon';
 
 export const workExperienceItems: WorkExperienceItem[] = [
   {
+    company: 'Skema',
+    position: 'Software Engineer',
+    link: 'https://skema.ai',
+    startDate: DateTime.fromObject({ year: 2025 }),
+    description: `Developing a platform for designers and architects
+      that helps them reuse entities from previous projects, streamlining the design process and reducing the time required for modeling`
+  },
+  {
     company: 'Grid Dynamics',
     position: 'UI Engineer',
     link: 'https://www.griddynamics.com',
@@ -20,7 +28,7 @@ data-driven decisions to optimize marketing strategies.
     startDate: DateTime.fromObject({ year: 2022 }),
     endDate: DateTime.fromObject({ year: 2024 }),
     description: `
-      Developed a a platform to help managers and employees communicate and collaborate more effectively.
+      Developed a platform to help managers and employees communicate and collaborate more effectively.
       Led the implementation of reporting tool for employees to conveniently report their work and reduce taxes.
       Adopted TypeScript, React-Query to improve the developer experience and code quality.
     `,
